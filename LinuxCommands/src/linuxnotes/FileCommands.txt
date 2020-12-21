@@ -1,0 +1,45 @@
+File commands 
+
+===
+1 cat
+
+- create new file    
+- display content of file cat testing.txt 
+- display 2 files content 
+- append data in existing file
+
+cat > testing.txt and enter content and ctrl+D 
+cat testing.txt 
+cat testing.txt testing123.txt  (display content of both files )
+
+cat >> testing.txt 
+content appnd s abcd 
+ctrl D 
+
+=========================================================
+2 cp
+- copy content of file
+cp testing1.txt testing_newcp.txt 
+===========================================================
+3 mv
+- Rename file , directory 
+mv testing.txt renamedTesting.txt 
+mv mydir myrenameddir 
+
+- Move files from one to another directry 
+mv myfile.txt yourdir 
+==========================================================
+4 rm 
+- Remove file 
+rm filename.txt 
+
+- Remove directry 
+rm mydirepmty (If empty)
+rm -r mydir (If not empty) // -r recursion 
+============================================================
+
+
+
+
+
+
