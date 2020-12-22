@@ -1,0 +1,101 @@
+Directory commands 
+
+=============
+1. mkdir
+2. cd
+3. rmdir 
+================ 
+
+1 mkdir 
+- make directry and subdirectry 
+- make multiple directries 
+- make multiple subdirectris 
+
+mkdir testdir 
+mkdir testdir1 testdir2 testdir3 
+mkdir -p world/countries/states
+=======================================
+
+2. cd 
+
+- change directory 
+- cd .. (got to parent directory)
+- cd ~   (go to root directry)
+- cd directory1/subdir 
+==================================
+3. rmdir 
+
+- rmdir mydir (only if empty directory)
+- rm -r nonemptydir (any dire)
+- rmdir testdir1 testdir2 testdir3 (remove multiple empty directries)
+=========
+
+=============================
+
+touch command 
+
+- create empty file   touch mynonhiddenfile.txt
+- create hidden file  touch .myhiddenfile.txt
+- to see hidden file  ls -a
+=============================
+ls command 
+
+ list files 
+ ls (shows all files and directries )
+ ls -l (long list / display details of files )
+ ls -a  (display all files hidden files as well )
+ ls -l -a  (display all files hidden files as well and all details )
+ ls -f     (add slash to directory)
+ ls -r     (display files/directries in reverse order)
+ ls -R     (directries along with subdirectries and files dilspay)
+ ls -lS    (display as per max to low size of file)
+ ls -l Mydirvideos (see files in specifc directories )
+ ls Downloads (see files in specifc directories )
+ =======================
+ Wildcard Chars ()
+ 
+ * multiple chars
+ ? single char
+ [] range of chars 
+ 
+ ls ?.*   (display files with only single chars and any extension )
+ ls ?.doc (display files with only single chars and doc extension )
+ ls a*.txt  (display files whose name has multiple chars )
+ 
+ ls [a-z]*.* (display files name fall under a to z , any extension)
+ 
+ 
+ 
+ =============================
+ 
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
