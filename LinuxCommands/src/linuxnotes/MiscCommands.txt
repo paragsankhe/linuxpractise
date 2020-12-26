@@ -1,0 +1,398 @@
+Misc commands :
+=========================
+1. head : display specified number of lines from top in file 
+
+-(By default display top ten lines ) 
+head cities.txt 
+
+-(display top 20 lines ) 
+head -n 20 cities.txt  OR head -20 cities.txt
+=========
+2. tail : display specified number of lines from last in file 
+
+-(By default display last ten lines ) 
+tail cities.txt 
+tail -20 cities.txt 
+
+- Get 10 to 15 lines 
+head -15 cities.txt | tail -6
+============
+
+Display top 5 directories/files 
+ls -l | head -5 
+
+Display last 10 entries of dircts/files
+ls -l | tail -10
+=============
+
+3. more 
+: only forward and can not go back 
+: display data page wise 
+: press space bar for diff page 
+: press enter for one by one 
+: press q to come out 
+
+more cities.txt 
+
+===============
+4. less
+
+: forward and backward page by page  
+: display data page wise 
+: press space bar for diff page 
+: press up arrow to go back 
+: press enter for one by one 
+: press q to come out
+
+less cities.txt 
+
+: Display ls page by page 
+
+ls -l | less 
+ls -l | more 
+
+=================
+5. who 
+
+: displys logged in users in server 
+who
+
+:display my user login 
+whoami 
+
+=========
+6. hoastname 
+
+: display server name 
+: hostname -i  (display ip of host/server )
+==========
+7. uptime 
+: shows time how long its active 
+
+=============
+8. cal 
+: calendar 
+
+: display current month 
+cal 
+
+: display current year all month calendar 
+cal -y 
+
+: display whole year calendar 
+cal 2020
+cal 2021
+
+: display specific month calendar 
+cal 12 2020
+cal 6 2020 
+
+: display previous month , current and next month cal 
+cal -3 
+
+: display specific month cal year
+cal -m5
+
+==================
+9. date 
+
+: display current date time stamp 
+date 
+
+: display current year
+date "+%Y"
+
+: display current month
+date "+%m"
+
+: display current dare
+date "+%d"
+
+: display current date month year
+date "+%d-%m-%Y"
+06-12-2020
+
+: display current date month year
+date "+%d/%m/%Y"
+06/12/2020
+
+: display current date month year
+date "+%d/%m/%y"
+06/12/20 
+
+: display current week day name  Sun
+date "+%a"
+
+: display current week day name  Sunday 
+date "+%A"
+
+: display current month  name  Dec 
+date "+%b"
+
+: display current month  name  December
+date "+%B"
+
+: display current hour in 24 format 
+date "+%H"
+
+: display current hour in 12 format 
+date "+%I"
+
+:: display current minutes 
+date "+%M"
+
+: display current seconds 
+date "+%S"
+
+: display current hrs min seconds 
+date "+%H:%M:%S"
+
+12:12:12
+
+date --help (see all options )
+
+=============================
+
+10. wc 
+: wc file1.txt 
+: displays how many lines, how many words , and total chars 
+: 5 10 64 file1 
+
+: display from multiple files 
+wc file1 file2
+5 10 64 file1
+12 33 44 file2 
+17 43 108 total 
+
+: display only lines 
+wc -l file1 
+
+: display only word num
+wc -w file1 
+
+: display only chars num 
+wc -c file1 
+
+: display line and words 
+wc -lw file1 
+wc -wc file1 
+wc -lc file1 
+
+==================== 
+
+11. sort 
+: sort file data and display 
+
+sort cities.txt 
+
+: to save it to other file 
+sort cities.txt > sortedcities.txt 
+cat sortedcities.txt 
+
+: sort multiple files data 
+sort file1 file2 > sortedata.txt 
+cat sortedat.txt 
+
+: sort in reverse order 
+sort -r file1.txt 
+
+=====================
+12. uniq
+: Prerequisite : data should be sorted order 
+: get uniq or duplicate lines from file 
+
+: display uniq lines from file (without duplicates)
+uniq files1.txt 
+
+: display duplicate lines 
+uniq -d file1.txt 
+
+: display count of each line values 
+uniq -c file1.txt
+======================
+FILE COMPARE COMMANDS : cmp, diff and comm 
+=====================
+13. cmp
+
+: compare byte to byte text info 
+: It will display first difference 
+
+file1
+A
+B
+C
+D
+
+file2
+A
+B
+M
+N
+
+: cmp file1 file2 
+file1 file2 differ : byte 5, line 3
+==========================
+
+14 diff 
+: It shows mismatches 
+c : change 
+a : addition
+d : delete 
+
+< File1 
+> File2 
+
+
+File1 
+
+A
+B
+C
+D
+
+File2
+
+A
+B
+M
+N
+
+======
+
+diff file1 file2 
+3,4c3,4 
+< C
+< D 
+---
+>M
+>N
+
+change 3 and 4 from file1 to 3 and 4 of second file (i.e M and N)
+=====================
+File1 
+
+A
+B
+C
+D
+
+File2
+
+A
+B
+ 
+
+diff file1 file2 
+3,4d2
+<C 
+<D 
+
+: delete 3, 4 from file1 to make it same as file2 
+
+======================
+File1 
+
+A
+B
+
+
+File2
+
+A
+B
+C 
+D
+
+diff file1 file2 
+2a3,4 
+>C 
+>D 
+
+: add 3, 4 in file1 to make it same as file2 
+==================
+
+15 comm 
+: Pre req : files in sorted order 
+: Display 3 columns 
+: first two columns display uniq values 
+: third column dispay common values 
+
+
+File1 
+
+A
+B 
+C
+D 
+E
+
+File2 
+A
+B 
+P 
+S 
+
+comm file1 file2 
+    A
+	B 
+
+C    
+D 
+E 
+  P 
+  S 
+========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
